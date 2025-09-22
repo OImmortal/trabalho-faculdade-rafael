@@ -1,0 +1,78 @@
+Atividade 1 – Escopo Estático x Escopo Dinâmico
+ Objetivo: Compreender a diferença entre escopo estático e dinâmico.
+ Passos:
+ • Implemente em Python um código com funções aninhadas: - Uma variável global `x = 10`. 
+Uma função `f()` que imprime o valor de `x`. - Uma função `g()` que define `x = 20` e chama
+ `f()`. - Execute `g()` e observe o resultado.
+ • Implemente um exemplo semelhante em JavaScript e compare os resultados.
+ Perguntas para reflexão:
+ • O valor impresso depende do local de definição ou do local de chamada da função?
+ • Qual linguagem se comporta como escopo estático e qual se aproxima de dinâmico?
+
+Atividade 2 – Tempo de Vida das Variáveis
+ Objetivo: Analisar a diferença entre variáveis estáticas e automáticas.
+ Passos:
+ • Em C, crie uma função `contador()` com duas variáveis locais: - `int a = 0;` (automática) 
+`static int b = 0;` (estática)
+ • A cada chamada de `contador()`, incremente ambas e imprima os valores.
+ • Chame `contador()` três vezes seguidas.
+ Perguntas para reflexão:
+ • Por que `a` sempre reinicia do zero, mas `b` acumula valor entre chamadas?
+ • Como isso se relaciona com tempo de vida da variável?
+
+ Perguntas para reflexão:
+
+Por que a reinicia, mas b acumula?
+→ a é automática (alocada na pilha a cada chamada, destruída ao sair da função).
+→ b é estática (alocada uma única vez na memória estática e preserva o valor entre chamadas).
+
+Relação com tempo de vida:
+→ Tempo de vida da variável automática = duração da execução da função.
+→ Tempo de vida da variável estática = duração de todo o programa.
+
+Atividade 3 – Declaração de Tipos e Coerção
+ Objetivo: Explorar tipagem estática e dinâmica, além de conversão de tipos.
+ Passos:
+ • Em Java, declare uma variável `int num = 10;` e tente atribuir uma string a ela. Observe o
+ resultado.
+ • Em Python, crie `num = 10` e depois faça `num = 'dez'`.
+• Em ambas as linguagens, tente somar `num + 5` e observe o comportamento.
+ Perguntas para reflexão:
+ • Por que o Java não permite essa operação e o Python permite?
+ • Quais as vantagens e desvantagens de cada abordagem?
+
+ Por que Java não permite e Python permite?
+→ Java é estaticamente tipada → verificação em tempo de compilação.
+→ Python é dinamicamente tipada → só verifica em tempo de execução.
+
+Vantagens e desvantagens:
+
+Java: mais seguro, menos erros em tempo de execução, mas menos flexível.
+
+Python: mais flexível, rápido de prototipar, mas sujeito a erros em execução.
+
+Atividade 4 – Trabalhando com Arrays e Registros (Structs) Objetivo: Compreender a diferença entre tipos homogêneos (arrays) e heterogêneos (structs/objetos).
+
+
+Passos:
+    • Em C: Crie um array de 5 inteiros e inicialize com valores de sua escolha.
+    • Ainda em C: Crie uma struct `Livro` com campos: `titulo`, `autor`, `anoPublicacao` e inicialize um objeto.
+    • Em Java: Crie uma classe `Livro` com atributos semelhantes, crie uma `ArrayList` e adicione 3 objetos.
+    • Imprima apenas os títulos dos livros adicionados.
+      
+Perguntas para reflexão:
+ • Qual a diferença entre um array e um registro/objeto?
+ • Quando seria mais adequado usar array e quando usar struct/classe
+
+
+Diferença entre array e struct/objeto:
+
+Array: homogêneo (todos elementos do mesmo tipo).
+
+Struct/Classe: heterogêneo (campos de tipos diferentes).
+
+Quando usar cada um?
+
+Array: quando precisamos de muitos elementos iguais (ex.: lista de números).
+
+Struct/Classe: quando precisamos modelar entidades com vários atributos diferentes (ex.: livros, pessoas, produtos).
